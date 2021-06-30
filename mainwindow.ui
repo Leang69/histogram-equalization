@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImageProcessing</class>
+ <widget class="QMainWindow" name="ImageProcessing">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>ImageProcessing</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>900</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionImport_File"/>
+    <addaction name="actionExport_FIle"/>
+   </widget>
+   <widget class="QMenu" name="menuProcessing">
+    <property name="title">
+     <string>Processing</string>
+    </property>
+    <widget class="QMenu" name="menuColor_Image">
+     <property name="title">
+      <string>Color Image</string>
+     </property>
+     <addaction name="actionGray_Image"/>
+     <addaction name="actionRGB_Image"/>
+    </widget>
+    <addaction name="menuColor_Image"/>
+   </widget>
+   <widget class="QMenu" name="menuimage_enhancement">
+    <property name="title">
+     <string>Image Enhancement</string>
+    </property>
+    <widget class="QMenu" name="menuHistogram_Equalization">
+     <property name="title">
+      <string>Histogram Equalization</string>
+     </property>
+     <addaction name="Histogram_EqualizationYes"/>
+     <addaction name="Histogram_EqualizationNo"/>
+    </widget>
+    <addaction name="menuHistogram_Equalization"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuProcessing"/>
+   <addaction name="menuimage_enhancement"/>
+  </widget>
+  <action name="actionImport_File">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Import File</string>
+   </property>
+  </action>
+  <action name="actionExport_FIle">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Export FIle</string>
+   </property>
+  </action>
+  <action name="actionGray_Image">
+   <property name="text">
+    <string>Gray Image</string>
+   </property>
+  </action>
+  <action name="actionRGB_Image">
+   <property name="text">
+    <string>RGB Image</string>
+   </property>
+  </action>
+  <action name="Histogram_EqualizationYes">
+   <property name="text">
+    <string>Yes</string>
+   </property>
+  </action>
+  <action name="Histogram_EqualizationNo">
+   <property name="text">
+    <string>No</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+ <slots>
+  <signal>signal1()</signal>
+ </slots>
+</ui>
