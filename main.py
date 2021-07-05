@@ -28,6 +28,10 @@ class Mainwindow:
         self.window.stackedWidget.setCurrentIndex(0)
 
         self.window.actionExport_FIle.setEnabled(0)
+        self.window.actionGray_Image.setEnabled(0)
+        self.window.actionRGB_Image.setEnabled(0)
+        self.window.Histogram_EqualizationNo.setEnabled(0)
+        self.window.Histogram_EqualizationYes.setEnabled(0)
 
         self.window.actionImport_File.triggered.connect(self.importImage)
         self.window.actionExport_FIle.triggered.connect(self.exportImage)

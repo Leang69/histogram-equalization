@@ -36,16 +36,20 @@ class ImageProcessing:
 
     def setImg(self, central_widget):
         path_to_file, _ = QFileDialog.getOpenFileName(central_widget, "Select Image", os.path.dirname(__file__),
-                                                      "Images (*.jpg *.bmp *.png)")
+                                                      "Images (*.jpg *.bmp *.png *.tif)")
         if path_to_file != '':
             self.imgRGB = cv.imread(path_to_file)
             self.outputImage = self.imgRGB
             self.imgRGB = cv.cvtColor(self.imgRGB, cv.COLOR_BGR2RGB)
             self.displayImage(self.imgRGB, QImage.Format_RGB888, central_widget)
             central_widget.actionExport_FIle.setEnabled(1)
+            central_widget.actionGray_Image.setEnabled(1)
+            central_widget.actionRGB_Image.setEnabled(1)
+            central_widget.Histogram_EqualizationNo.setEnabled(1)
+            central_widget.Histogram_EqualizationYes.setEnabled(1)
 
     def exportImage(self, central_widget):
-        path_to_file, _ = QFileDialog.getSaveFileName(central_widget, "Select location",os.path.dirname(__file__),"Images (*.jpg *.bmp *.png)")
+        path_to_file, _ = QFileDialog.getSaveFileName(central_widget, "Select location",os.path.dirname(__file__),"Images (*.jpg")
         if path_to_file != '':
             cv.imwrite(path_to_file, self.outputImage)
 
